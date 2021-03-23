@@ -29,7 +29,7 @@ let radio = 640 / 480
 let waitTime = 5;
 let waitTimeFuncVar;
 
-let nextStageTime = 30;
+let nextStageTime = 40;
 let nextStageTimeVar;
 
 let test1;
@@ -148,20 +148,20 @@ function draw() {
                 stopCounting = false;
             }
         }
-        textSize(40);
+        textSize(60);
         textAlign(LEFT, TOP);
         // fill(255, 0, 0);
-        text("Stage: " + String(parseInt(stage) + 1), 25, 30);
+        text("Stage: " + String(parseInt(stage) + 1), 25, 10);
         text("Count: " + stageResult[0] + ", " + stageResult[1], 25, 80);
-        text("Mark: " + Math.max(stageResult[0], stageResult[1]) + '/8', 25, 130);
-        text("Time Left: " + nextStageTime, 25, 180)
+        text("Mark: " + Math.max(stageResult[0], stageResult[1]) + '/8', 25, 150);
+        text("Time Left: " + nextStageTime, 25, 220)
         
         
         /*text("Count: " + stageResult[0] + ", " + stageResult[1], 25, 30);
         text("Mark: " + Math.max(stageResult[0], stageResult[1]) + '/8', 25, 80);*/
         
-        text("Left confidence: " + test1, 25, 230);   // Debuging reading
-        text("Right confidence: " + test2, 25, 280);   // Debuging reading
+        /*text("Left confidence: " + test1, 25, 230);   // Debuging reading
+        text("Right confidence: " + test2, 25, 280);*/   // Debuging reading
         /*test("leftKnee: " + test2, 25, 80);
         text("rightKnee: " + test3, 25, 130);
         */
@@ -189,8 +189,8 @@ function countMovement() {
                     break;
                 }
                 
-                test1 = leftKnee.confidence; // test
-                test2 = rightKnee.confidence; // test
+                /*test1 = leftKnee.confidence; // test
+                test2 = rightKnee.confidence;*/ // test
                 
                 if (rightKnee.y > leftKnee.y + poseOffset) {
                     stageResult[0] += 1
