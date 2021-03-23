@@ -13,7 +13,7 @@ let poses = [];
 let stage = 0;
 let stageResult = [0, 0]
 let poseOffset = 10
-let confidenceOffset = 0.1
+let confidenceOffset = 0.6
 let stopCounting = false
 
 let currentFrame = 0
